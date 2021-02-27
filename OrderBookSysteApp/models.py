@@ -8,5 +8,5 @@ class Search(models.Model) :
     quantity = models.IntegerField()
 
 
-
+class
 
