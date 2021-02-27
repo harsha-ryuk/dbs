@@ -1,0 +1,68 @@
+<html>
+<style>
+body{
+background-image:url("https://cdn1.iconfinder.com/data/icons/logistic-delivery-1-8/130/28-512.png");
+background-repeat:no-repeat;
+}
+h1{
+color:black;
+}
+button{
+  background-color: red;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body>
+<h1><center>BOOK ORDER</center></h1>
+<form action="">
+  <div class="container">
+    <table align='center' >
+    <tr><td>
+    <label for="searchstock"><b>Stock</b></label></td><td>
+    <select id="stock" name="stock">
+    <option value=""></option>
+   <option value=""></option>
+   </select></td>
+</tr><tr class="blank_row">
+            <td bgcolor="#FFFFFF" colspan="3">&nbsp;</td>
+        </tr>
+<tr><td>
+    <label for="type"><b>Order Type</b></label></td>
+<td>
+    <select id="ordertypre" name="ordertype">
+    <option value="Limit">Limit</option>
+   <option value="Market">Market</option>
+   </select></td>
+</tr><tr class="blank_row">
+            <td bgcolor="#FFFFFF" colspan="3">&nbsp;</td>
+        </tr>
+<tr><td>
+    <label for="price"><b>Price</b></label></td><td>
+    <input type="number" placeholder="Enter Price" name="price" id="price" required></td>
+</tr><tr class="blank_row">
+            <td bgcolor="#FFFFFF" colspan="3">&nbsp;</td>
+        </tr>
+<tr><td>
+<label for="Quantity"><b>Quantity</b></label></td><td>
+    <input type="number" placeholder="Enter Quantity" name="quant" id="quant" required>
+    </td>
+</tr><tr class="blank_row">
+            <td bgcolor="#FFFFFF" colspan="3">&nbsp;</td>
+        </tr>
+    <tr colspan=2><td><br></td><td>
+    <button type="submit" >Place Order</button></td>
+<p> Your order is placed</p>
+</tr>
+
+  </div>
+</form>
+</body>
+</html>
