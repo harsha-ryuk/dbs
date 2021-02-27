@@ -1,72 +1,138 @@
+<!DOCTYPE html>
 <html>
-
-<head></head>
-
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
 <body>
-    <p style="color:red ;font-size:35px">DBS
-    </p>
-    <a href="" style="text-decoration: none; background-color: red; size: 35px;">Open Market</a>
-    <a href="" style="text-decoration: none; background-color: red; size: 35px;">Close Market</a>
-
-
-
-    <table align='center' style=" border: 1px solid black ; width:75%">
-
-        <tr style="border: 1px solid black">
-            <th style="border: 1px solid black">S.No</th>
-            <th style="border: 1px solid black">Stock Name</th>
-            <th style="border: 1px solid black">Order Qty</th>
-            <th style="border: 1px solid black">Order Type</th>
-            <th style="border: 1px solid black">Executed Qty</th>
-            <th style="border: 1px solid black">Price</th>
-            <th style="border: 1px solid black">Order Status</th>
-            <th style="border: 1px solid black">Order Date</th>
-        </tr>
-
-        <tr style="border: 1px solid black">
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-        </tr>
-
-        <tr style="border: 1px solid black">
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-        </tr>
-
-        <tr style="border: 1px solid black">
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-            <td style="border: 1px solid black"></td>
-        </tr>
-    </table>
-    <tr>
-        <td>
-            <!--         
-</tr><tr><td>
-  <tr colspan=2><td>
-    <button type="submit" >Open Market</button></td>
-</tr>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap.min.js"></script>
+    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
  
-<tr colspan=2><td>
-    <button type="submit" >Close Market</button></td>
-</tr> -->
-</body>
+<div class="row">
 
+<button type="button" class="btn btn-primary">Open Market</button>
+<button type="button" class="btn btn-secondary">Close Market</button>
+</div> 
+ 
+<br><br><br>
+<form>
+  <div class="form-row">
+	<div class="col-md-3">
+		<select class="">
+			<option>Select Stock</option>
+			<option value="dbs">DBS</option>
+		</select>
+	</div>
+	<div class="col-md-3">
+		<p >From Date: <input type="text" id="fromdatepicker"></p>
+	</div>
+	<div class="col-md-3">
+	<p >To Date: <input type="text" id="todatepicker"></p>
+	</div>
+	<div class="col-md-3">
+	
+		<button type="button" class="btn btn-secondary">Show Orders</button>
+	</div>
+</form>
+</div>
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>S.NO.</th>
+                <th>Stock Name</th>
+                <th>Order Qty</th>
+                <th>Order Type</th>
+                <th>Executed Qty</th>
+                <th>Price</th>
+				<th>Order Status</th>
+				<th>Ordet Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>DBS</td>
+                <td>50</td>
+                <td>Limit</td>
+                <td>0</td>
+                <td>150</td>
+                <td>PLACED</td>
+                <td>21 Feb 2021</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>DBS</td>
+                <td>50</td>
+                <td>Limit</td>
+                <td>0</td>
+                <td>150</td>
+                <td>PLACED</td>
+                <td>21 Feb 2021</td>
+            </tr><tr>
+                <td>3</td>
+                <td>DBS</td>
+                <td>50</td>
+                <td>Limit</td>
+                <td>0</td>
+                <td>150</td>
+                <td>PLACED</td>
+                <td>21 Feb 2021</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>S.NO.</th>
+                <th>Stock Name</th>
+                <th>Order Qty</th>
+                <th>Order Type</th>
+                <th>Executed Qty</th>
+                <th>Price</th>
+				<th>Order Status</th>
+				<th>Ordet Date</th>
+            </tr>
+        </tfoot>
+    </table>
+   
+   <form>
+  <div class="form-row">
+	<div class="col-md-4">
+		<select class="">
+			<option>Execute Qty</option>
+			<option value="60">60</option>
+		</select>
+	</div>
+	<div class="col-md-4">
+		<select class="">
+			<option>Execution Price</option>
+			<option value="150">150</option>
+		</select>
+	</div>
+	<div class="col-md-4">
+	
+		<button type="button" class="btn btn-secondary">Execute Orders</button>
+	</div>
+</form>
+</div>
+</body>
+</html>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+
+$( function() {
+    $( "#fromdatepicker" ).datepicker();
+    $( "#todatepicker" ).datepicker();
+  } );
+</script>
+</body>
 </html>
